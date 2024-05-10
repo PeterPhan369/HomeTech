@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "body": "Smart home system",
+        "content": "Supports households in monitoring the condition of the house remotely through smart devices"
+    },
+    "nav": {
+        "act": "Activity",
+        "stat": "Statistics",
+        "flo": "Monitor"
+    },
+    "stat": {
+        "temp": "Average temperature",
+        "humi": "Average humidity",
+        "light": "Average light"
+    },
+    "cur": {
+        "temp": "Temp",
+        "humi": "Humi",
+        "light": "Light"
+    }
+}

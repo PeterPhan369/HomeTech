@@ -1,0 +1,23 @@
+{
+    "hero": {
+        "body": "Hệ thống nhà thông minh",
+        "content": "Hỗ trợ các hộ gia đình trong việc theo dõi tình trạng nhà cửa từ xa thông qua các thiết bị thông minh"
+    },
+    "nav":{
+        "act": "Hoạt động",
+        "stat": "Thống kê",
+        "flo": "Theo dõi"
+    },
+    "stat":
+    {
+        "temp": "Nhiệt độ trung bình",
+        "humi": "Độ ẩm trung bình",
+        "light": "Ánh sáng trung bình"
+    },
+    "cur":
+    {
+        "temp": "Nhiệt độ",
+        "humi": "Độ ẩm",
+        "light": "Ánh sáng"
+    }
+}

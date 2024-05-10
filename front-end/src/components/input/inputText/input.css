@@ -1,0 +1,26 @@
+.input {
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.input:disabled {
+  outline-color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+@media all and (min-width: 768px) {
+  .input {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}

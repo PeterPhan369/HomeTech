@@ -1,0 +1,46 @@
+:root {
+  --bg-body: rgba(250, 250, 250, 1);
+  --text-primary: #ff6000;
+  --text-secondary: #454545;
+  --text-cta: #ffa559;
+  --text-layer: #ffe6c7;
+  --max-width: 1024px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.625rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+}
+
+@media all and (min-width: 768px) {
+  .card {
+    padding: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+}

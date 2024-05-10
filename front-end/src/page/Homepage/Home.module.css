@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid var(--text-primary);
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.datetime-picker-container {
+  display: flex;
+}
+
+.datetime-picker {
+  margin-right: 10px;
+  /* Additional styles as needed */
+}
+
+.nav {
+  position: relative; /* Use relative positioning instead of absolute */
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.nav .ul {
+  list-style-type: none;
+  margin-right: 2.5em; /* Use relative units like em */
+  display: flex;
+  align-items: center;
+}
+
+.nav .li {
+  display: inline-block;
+}
+
+.nav .li:not(:last-child) {
+  margin-right: 12em; /* Use relative units like em */
+}
+
+.nav .li1:not(:last-child) {
+  margin-right: 15em; /* Use relative units like em */
+}
+
+
+.nav .link {
+  border: none;
+  font-weight: 600;
+  font-size: 1.9em; /* Use relative units like em */
+  height: 100%;
+  color: var(--text-secondary);
+}
+
+
+.container {
+  position: relative;
+}
