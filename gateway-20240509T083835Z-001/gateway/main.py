@@ -10,7 +10,7 @@ from Adafruit_IO import Client
 
 # from getFeedData import 
 client = pymongo.MongoClient(
-    'mongodb+srv://peteoz6903:06092003@cluster0.jgl7eab.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    'mongoDB_URL'
 )
 db = client["multidisciplinary"]
 collection1 = db['fan']
@@ -24,8 +24,8 @@ collection7 = db['ledrgbauto']
 # collection10 = db["activity"]
 AIO_FEEDS = ["ledrgb", "temp", "humid", "fan", "fanauto", "ledrgbauto"]
 
-AIO_USERNAME = "hungpham1406"
-AIO_KEY = "aio_kxwQ606qvHocChiIHwc6u5mBZrRx"
+AIO_USERNAME = "ADA_USERNAME"
+AIO_KEY = "ADA_KEY"
 aio = Client(AIO_USERNAME, AIO_KEY)
 
 
@@ -105,58 +105,3 @@ sensorType = 0
 
 while True:
     pass
-
-# # from getFeedData import *
-# import pymongo 
-
-# AIO_FEED_IDs = ["temp","light","humid", "fan","ledrgb","fanauto"]
-# AIO_USERNAME = "hungpham1406"
-# AIO_KEY = "aio_kxwQ606qvHocChiIHwc6u5mBZrRx"
-# FEED_KEYS = ['smarthome.tempsensor', 'smarthome.lightsensor','smarthome.humisensor']  
-
-# def connected(client):
-#     print("Ket noi thanh cong ...")
-#     for topic in AIO_FEED_IDs:
-#         client.subscribe(topic)
-#         print("Connecting to topic " + topic)
-
-# def subscribe(client , userdata , mid , granted_qos):
-
-#     print("Subscribe thanh cong ...")
-#     for feed in AIO_FEED_IDs:
-#         client.subscribe(feed)
-#         print(f"Subscribed to feed: {feed}")
-
-# def disconnected(client):
-#     print("Ngat ket noi ...")
-#     sys.exit (1)
-
-    
-
-# client = MQTTClient(AIO_USERNAME , AIO_KEY)
-# client.on_connect = connected
-# client.on_disconnect = disconnected
-# client.on_message = message
-# client.on_subscribe = subscribe
-# client.connect()
-# client.loop_background()
-# counter = 10
-# sensorType = 0 #send sensor's data to server sequentially, use SWITCH CASE
-# while True:
-#     # counter = counter -1
-#     # if counter <= 0:
-#     #     #send data to server with 10s interval
-#     #     print("Random data is published to server")
-#     #     counter = 10
-#     #     temp = random.randint(10,40)
-#     #     client.publish("sensor1"  ,temp)
-#     #     light = random.randint(100,500)
-#     #     client.publish("sensor2"  ,light)
-    
-#     # time.sleep(1)
-#     # for feed_key in FEED_KEYS:
-#     #         fetch_sensor_data(feed_key)
-#     time.sleep(10)
-#     pass
-
-# List of Feed IDs to subscribe to
