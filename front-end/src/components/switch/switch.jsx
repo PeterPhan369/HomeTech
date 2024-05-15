@@ -57,16 +57,16 @@ const Toggle = () => {
   const [powerOn1, setPowerOn1] = useState(false);
   const [powerOn2, setPowerOn2] = useState(false);
 
-  const feedKeys = ['smarthome.led', 'smarthome.thieftcontrol', 'smarthome.doorcontrol']; // Example feed keys for devices
+  const feedKeys = ['ledrgb', 'fanauto', 'ledrgbauto']; // Example feed keys for devices
 
   useEffect(() => {
     // Function to fetch the current toggle states
     const fetchToggleStates = () => {
         feedKeys.forEach((key, index) => {
             fetchCurrentValueFromAdafruit(key).then(({ lastValue }) => {
-                if (index === 0) setPowerOn(lastValue === 'ON');
-                if (index === 1) setPowerOn1(lastValue === 'ON');
-                if (index === 2) setPowerOn2(lastValue === 'ON');
+                if (index === 0) setPowerOn(lastValue === '1');
+                if (index === 1) setPowerOn1(lastValue === '1');
+                if (index === 2) setPowerOn2(lastValue === '1');
             }).catch(error => console.error(`Error fetching state for ${key}:`, error));
         });
     };
@@ -83,7 +83,7 @@ const Toggle = () => {
 
   const updateAdafruit = async (key, newState) => {
       try {
-          await addNewValueToAdafruit(key, newState ? 'ON' : 'OFF');
+          await addNewValueToAdafruit(key, newState ? '1' : '0');
           console.log(`Updated ${key} to ${newState}`);
       } catch (error) {
           console.error(`Error updating ${key}:`, error);
@@ -139,7 +139,7 @@ const Toggle = () => {
                         ></AntSwitch>}
                     label={
                         <Typography sx={{ fontSize: '1.5rem', fontFamily: 'Nunito', padding:0, boxSizing: 'border-box' }} >
-                          Sensor
+                          Fan Auto
                         </Typography>
                       }
                     labelPlacement="top"
@@ -155,7 +155,7 @@ const Toggle = () => {
                         ></AntSwitch>}
                     label={
                         <Typography sx={{ fontSize: '1.5rem', fontFamily: 'Nunito', padding:0, boxSizing: 'border-box' }} >
-                          Door
+                          Led RGB Auto
                         </Typography>
                       }
                     labelPlacement="top"

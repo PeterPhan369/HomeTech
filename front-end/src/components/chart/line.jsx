@@ -150,7 +150,7 @@ function graphData3(data, t){
 
 const LineChart = () => {
   function getDataTemp() {
-    return fetch("https://multidisciplinary-project.onrender.com/api/v1/week/tempsensor")
+    return fetch("https://io.adafruit.com/api/v2/hungpham1406/feeds/humid")
         .then(response => response.json())
         .then(data => {
             return data;

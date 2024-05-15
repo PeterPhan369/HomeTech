@@ -7,7 +7,7 @@ import { fetchCurrentValueFromAdafruit, addNewValueToAdafruit } from '../../util
 
 export default function InputSlider() {
   const [value, setValue] = useState(0);
-  const feedKey = 'smarthome.fan';  // Replace this with your actual feed key
+  const feedKey = 'fan';  // Replace this with your actual feed key
 
   useEffect(() => {
     // Function to fetch and set the initial slider value from Adafruit

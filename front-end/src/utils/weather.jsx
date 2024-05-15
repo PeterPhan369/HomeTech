@@ -1,11 +1,11 @@
 export async function getDataHumi() {
-    const response = await fetch("https://io.adafruit.com/api/v2/PhanDao/feeds/smarthome.humisensor");
+    const response = await fetch("https://io.adafruit.com/api/v2/hungpham1406/feeds/humid");
     const data = await response.json();
     return data;
 }
 
 export async function getDataTemp() {
-    const response = await fetch("https://io.adafruit.com/api/v2/PhanDao/feeds/smarthome.tempsensor");
+    const response = await fetch("https://io.adafruit.com/api/v2/hungpham1406/feeds/temp");
     const data = await response.json();
     // Assume convertUTCtoLocal is moved here too
     data.updated_at = convertUTCtoLocal(data.updated_at);
@@ -13,7 +13,7 @@ export async function getDataTemp() {
 }
 
 export async function getDataLight() {
-    const response = await fetch("https://io.adafruit.com/api/v2/PhanDao/feeds/smarthome.lightsensor");
+    const response = await fetch("https://io.adafruit.com/api/v2/hungpham1406/feeds/light");
     const data = await response.json();
     return data;
 }

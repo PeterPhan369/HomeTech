@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export async function fetchCurrentValueFromAdafruit(feedKey) {
-    const ADAFRUIT_IO_USERNAME = 'PhanDao';
-    const ADAFRUIT_IO_KEY = 'aio_rbXg65mhjzWKcbzIrjt2JOavlKkH';
+    const ADAFRUIT_IO_USERNAME = 'hungpham1406';
+    const ADAFRUIT_IO_KEY = 'aio_kxwQ606qvHocChiIHwc6u5mBZrRx';
     const url = `https://io.adafruit.com/api/v2/${ADAFRUIT_IO_USERNAME}/feeds/${feedKey}/data/last`;
 
     try {
@@ -28,8 +28,8 @@ export async function fetchCurrentValueFromAdafruit(feedKey) {
 }
 
 export async function addNewValueToAdafruit(feedKey, newValue) {
-    const ADAFRUIT_IO_USERNAME = 'PhanDao';
-    const ADAFRUIT_IO_KEY = 'aio_rbXg65mhjzWKcbzIrjt2JOavlKkH';
+    const ADAFRUIT_IO_USERNAME = 'hungpham1406';
+    const ADAFRUIT_IO_KEY = 'aio_kxwQ606qvHocChiIHwc6u5mBZrRx';
     const url = `https://io.adafruit.com/api/v2/${ADAFRUIT_IO_USERNAME}/feeds/${feedKey}/data/last`;
 
     try {
