@@ -28,7 +28,7 @@ app.use('/api/v1', index)
 
 const startServer = async () => {
     try {
-        await connectDatabase("mongodb+srv://peteoz6903:06092003@cluster0.jgl7eab.mongodb.net/")
+        await connectDatabase("mongoDB_URL")
         console.log("Database connection successful")
         app.listen(port, () => {
             console.log("Server is listening at port " + port)
